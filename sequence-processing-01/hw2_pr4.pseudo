@@ -1,0 +1,53 @@
+Mark campbell
+Module 3 Homework 2 Problem 4
+
+3 Step Analysis:
+
+1. Do you understand the problem? 
+    Given the annual pay increase the company needs to calculate the new salary and the retroactive amount to pay the employee. This requires the new
+    monthly salary to be calculated as well.
+2. Identify Following: Inputs, Outputs, Equestions
+
+    Inputs                           
+    ----------------------------
+    final float PAY_INCREASE = .076 
+    final int RETROACTIVE_TIME_RANGE = 6
+    PreviousAnnualSalary
+    test data input ($35K, $46.5K, $52,450)
+
+    Outputs                           
+    ----------------------------
+    float RetroactivePay
+    float NewAnnualSalary
+    float NewMonthlySalary
+
+    Equations
+    ----------------------------
+    Old Salary * .076 + Salary = New Salary
+    New Salary / 12 = Monthly Salary
+    Old Monthly Salary * 6 * .076 = Retroactive Pay 
+
+3. Limits or Constraints
+    retroactive time range is 6 months
+    input is limited to last year's salary not further back
+    pay increase limited to 7.6%
+
+
+// ************ Pseudocode ************
+
+PAY_INCREASE = .076
+RETROACTIVE_TIME_RANGE = 6
+
+write "Please enter employee's salary --> "
+read PreviousAnnualSalary
+
+OldMonthlySalary = PreviousAnnualSalary div 12
+PreviousPayForSixMonths = OldMonthlySalary * 6
+
+NewAnnualSalary = PreviousAnnualSalary * ANNUAL_PAY_INCREASE + PreviousAnnualSalary
+NewMonthlySalary = NewAnnualSalary div 12
+RetroactivePay = PreviousPayForSixMonths * ANNUAL_PAY_INCREASE
+
+write "Retroactive Pay --> ", RetroactivePay
+write "New Annual Salary --> ", NewAnnualSalary
+write "New Monthly Salary --> ", NewMonthlySalary

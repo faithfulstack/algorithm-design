@@ -1,0 +1,43 @@
+Mark campbell
+Module 3 Homework 2 Problem 5
+
+3 Step Analysis:
+
+1. Do you understand the problem? 
+    We need to determine if a given year is a leap year based and display the findings.
+    
+2. Identify Following: Inputs, Outputs, Equestions
+
+    Inputs                           
+    ----------------------------
+    int TargetYear
+
+
+    Outputs                           
+    ----------------------------
+    A message indicating when the the given year is a leap year or not
+
+    Equations
+    ----------------------------
+    if-elseif-else 
+    TargetYear mod 400
+    TargetYear mod 4
+    TargetYear mod 100
+
+3. Limits or Constraints  
+    - input should be a positive integer
+    
+
+
+// ************ Pseudocode ************
+
+write "Enter a year: "
+read TargetYear
+
+if ( TargetYear mod 400 == 0 ) then
+    write TargetYear, " is a leap year."
+else if ( TargetYear mod 4 == 0 and TargetYear mode 100 != 0 ) then
+    write TargetYear, " is a leap year."
+else
+    write TargetYear, " is not a leap year."
+end if

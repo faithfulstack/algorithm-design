@@ -1,0 +1,61 @@
+Mark campbell
+Module 4 Homework 3 Problem 4
+
+3 Step Analysis:
+
+1. Do you understand the problem? 
+    Calculate the state income tax for the given salary value and display the net income and the state tax.
+    
+2. Identify Following: Inputs, Outputs, Equestions
+
+    Inputs                           
+    ----------------------------
+    float Salary
+    float Tax
+
+    Outputs                           
+    ----------------------------
+    float NetIncome
+    float StateTax
+
+
+    Equations
+    ----------------------------
+    if/else
+    Tax = .05 * (Salary - 15000) -> middle 15K
+    Tax = (.05 * 15000) + (.10 x (Salary - 30000)) -> amount over 30K  
+
+3. Limits or Constraints  
+    - no tax is paid on the first $15K net income
+    - a tax of 5% is assessed on each dollar of net income from $15,001 to $30K
+    - a tax of 10% is assessed on each dollar of net income over $30K
+    
+
+
+// ************ Pseudocode ************
+
+
+
+write "Please enter the person's net income --> "
+read Salary
+
+
+if ( Salary > 30000 ) then  
+
+    Tax = (.05 * 15000 ) + ( .10 * (Salary - 30000 )) // first 15K is not taxed but the 2nd is taxed, then add the tax of cash over 30K
+
+else if ( Salary > 15000 ) then
+
+    Tax = .05 * ( Salary - 15000 )
+
+end if
+
+write "Net Income = ", Salary
+write "State Tax  = ", Tax
+
+
+
+
+
+
+
