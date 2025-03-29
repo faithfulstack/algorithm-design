@@ -1,0 +1,80 @@
+Mark campbell
+Module 5 Homework 4 Problem 2
+
+3 Step Analysis:
+
+1. Do you understand the problem? 
+    Determine an individual's legal status of intoxication level.
+    
+2. Identify Following: Inputs, Outputs, Equestions
+
+    Inputs                           
+    ----------------------------
+    float ConsumedAlcoholInGrams
+    float BodyWeightInGrams
+    float NumberOfDrinks
+    float BodyWeight
+    float NumberOfHoursDrinking
+    float BloodAlcoholContent
+    String Gender
+
+
+    Outputs                           
+    ----------------------------
+    BloodAlcoholContent
+    Message based on BloodAlcoholContent level
+
+
+    Equations
+    ----------------------------
+    ConsumedAlcoholInGrams = NumberOfDrinks * 14
+    BodyWeightInGrams = BodyWeight * 454
+    MetbolismRate = NumberOfHoursDrinking * 0.015
+    BloodAlcoholContent = ((ConsumedAlcoholInGrams / (BodyWeightInGrams * GenderR) ) * 100) - MetbolismRate
+
+3. Limits or Constraints  
+    - use specific formula to calculate BloodAlcoholContent
+    - use grams instead of pounds for body weight
+
+
+// ************ Pseudocode ************
+
+write "Enter your gender [Male or Female] --> "
+read Gender
+
+write "Enter your weight in pounds --> "
+read BodyWeight
+
+write "Enter the number drinks you consumed --> "
+read NumberOfDrinks
+
+write "Enter the number of hours you drank --> "
+read NumberOfHoursDrinking
+
+ConsumedAlcoholInGrams = NumberOfDrinks * 14
+BodyWeightInGrams = BodyWeight * 454
+MetbolismRate = NumberOfHoursDrinking * 0.015
+
+if ( Gender == 'Male' ) then
+
+    BloodAlcoholContent = (( ConsumedAlcoholInGrams / ( BodyWeightInGrams * 0.68 )) * 100 ) - MetbolismRate
+
+else if ( Gender == 'Female' ) then
+
+    BloodAlcoholContent = (( ConsumedAlcoholInGrams / ( BodyWeightInGrams * 0.55 )) * 100 ) - MetbolismRate
+
+end if
+
+if ( BloodAlcoholContent == 0 ) then
+    write "You are just fine"
+else if ( BloodAlcoholContent >= 0.0 and BloodAlcoholContent <= 0.05 ) then
+    wrtie "Feeling Good"
+else if ( BloodAlcoholContent >= 0.05 and BloodAlcoholContent <= 0.2 ) then
+    wrtie "Slurring Speech, Lose of Balance"
+else if ( BloodAlcoholContent >= 0.200 and BloodAlcoholContent <= 0.249 ) then
+    wrtie "Needs assistance in walking; total mental confusion"
+else if ( BloodAlcoholContent >= 0.250 and BloodAlcoholContent <= 0.399 ) then
+    wrtie "Alcohol Poisoning. Loss of consciousness."
+else 
+    write "Onset of coma, possible death due to respiratory arrest."
+end if

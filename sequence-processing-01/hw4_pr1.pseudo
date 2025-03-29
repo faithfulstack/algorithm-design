@@ -1,0 +1,132 @@
+Mark campbell
+Module 5 Homework 4 Problem 1
+
+3 Step Analysis:
+
+1. Do you understand the problem? 
+    Caluculate GPA based on input from two classes and displaying the GPA with both classes Letter grade and credit hours.
+    
+2. Identify Following: Inputs, Outputs, Equestions
+
+    Inputs                           
+    ----------------------------
+    char GradeClass1
+    char GradeClass2
+    float HoursClass1
+    float HoursClass2
+
+    Outputs                           
+    ----------------------------
+    Your GPA = GPA
+    GradeClass1
+    GradeClass2
+    HoursClass1
+    HoursClass2
+    You're doing poorly
+    Congratulations you're doing good
+
+
+    Equations
+    ----------------------------
+    if/else
+    GPA = TotalPoints / Total Number of Credits
+    ClassTotalPoints = CreditNumbers * Number value of Letter Grade
+    TotalPoints = ClassPoints For Class1 + ClassPoints for Class2
+
+3. Limits or Constraints  
+    - will not use +/- Grades 
+    - two clss Inputs
+    - assume user enters capital letters only
+    - display letter grade and numbe of credits for both classes
+    - display GPA 
+
+// ************ Pseudocode ************
+
+char GradeClass1
+char GradeClass2
+int HoursClass1
+int HoursClass2
+int TotalPoints
+float Class1Points
+float Class2Points
+float GPA
+
+write "Enter letter grade for first class --> "
+read GradeClass1  --B
+
+write "Enter number of credit hours for first class --> "
+read HoursClass1 -- 3
+
+write "Enter letter grade for second class --> "
+read GradeClass2 --A
+
+write "Enter number of credit hours for second class --> "
+read HoursClass2 --4
+
+//find Class1Points
+if ( GradeClass1 == 'A' ) then
+
+    Class1Points = HoursClass1 * 4.0
+
+else if ( GradeClass1 == 'B' ) then
+
+    Class1Points = HoursClass1 * 3.0 // Class1Points = 9.0
+
+else if ( GradeClass1 == 'C' ) then
+
+    Class1Points = HoursClass1 * 2.0
+
+else if ( GradeClass1 == 'D' ) then
+
+    Class1Points = HoursClass1 * 1.0
+
+else 
+
+    Class1Points = HoursClass1 * 0.0
+    
+end if
+
+//find Class2Points
+if ( GradeClass2 == 'A' ) then
+
+    Class2Points = HoursClass2 * 4.0 // Class2Points = 16.0
+
+else if ( GradeClass2 == 'B' ) then
+
+    Class2Points = HoursClass2 * 3.0
+
+else if ( GradeClass2 == 'C' ) then
+
+    Class2Points = HoursClass2 * 2.0 
+
+else if ( GradeClass2 == 'D' ) then
+
+    Class2Points = HoursClass2 * 1.0
+
+else 
+
+    Class2Points = HoursClass2 * 0.0
+    
+end if
+
+//find TotalClassPoints
+TotalClassPoints = Class1Points + Class2Points // 9.0 + 16.0 = 25.0
+
+// find GPA
+GPA = TotalClassPoints / ( HoursClass1 + HoursClass2 ) // 25.0 / ( 3 + 4 ) = 3.57142857
+
+
+write GradeClass1, "   ", HoursClass1 // B  3
+write GradeClass2, "   ", HoursClass2 // A  4
+write "Your GPA = ", GPA // 3.57142
+
+if ( GPA < 2.0 ) then
+
+    write "You are doing poorly"
+
+else if ( GPA >= 3.5 )
+
+    write "Congratulations, doing good" // Congratulations, doing good
+
+end if
+

@@ -1,0 +1,46 @@
+Mark campbell
+Module 4 Homework 3 Problem 5
+
+3 Step Analysis:
+
+1. Do you understand the problem? 
+    Calculate and display the multiples of 3 descending to 3.
+
+2. Identify Following: Inputs, Outputs, Equestions
+
+    Inputs                           
+    ----------------------------
+    int N
+
+    Outputs                           
+    ----------------------------
+    int MultiplesOf3
+
+    Equations
+    ---------------------------- 
+    iteration
+    if/else
+    N mod 3 = 0
+
+3. Limits or Constraints  
+    - iteration stops at 3
+    - displays all multiples of 3 descending to 3
+    
+
+
+// ************ Pseudocode ************
+
+write "Enter a positive whole number --> "
+read N
+
+while ( N >= 3 ) do
+
+    if  ( N mod 3 == 0 ) then
+
+        write N
+
+    end if
+
+    dec(N)
+
+end while

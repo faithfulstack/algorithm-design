@@ -1,0 +1,52 @@
+
+Mark campbell
+Module 3 Homework 2 Problem 6
+
+3 Step Analysis:
+
+1. Do you understand the problem? 
+    This requires us to repeatedly accept positive numbers from the user, 
+    count how many even number are entered, and stop when the user input 0 
+    and display the count of even numbers.
+    
+2. Identify Following: Inputs, Outputs, Equestions
+
+    Inputs                           
+    ----------------------------
+    int N 
+    int EvenNumberCounter
+
+
+    Outputs                           
+    ----------------------------
+    - User entered 'EvenNumberCounter' even numbers
+
+    Equations
+    ----------------------------
+    N mod 2 == 0
+
+3. Limits or Constraints  
+    - accept positive numbers
+    - loop should terminate when the user inputs 0
+    
+
+
+// ************ Pseudocode ************
+
+int EvenNumberCounter = 0
+
+write "Enter a positive numer (Enter 0 to stop): "
+read N 
+
+while ( N != 0 ) do 
+    
+    if ( N mod 2 == 0 ) then
+        EvenNumberCounter = EvenNumberCounter + 1
+    end if
+
+    write "Enter another number (Enter 0 to stop): "
+    read N 
+
+end while
+
+write "User entered ", EvenNumberCounter, " even numbers."

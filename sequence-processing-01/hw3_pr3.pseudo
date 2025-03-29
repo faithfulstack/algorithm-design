@@ -1,0 +1,42 @@
+3 Step Analysis:
+
+1. Do you understand the problem? 
+    Create an app/program that calculates the product, quotient, and remainder of two integers 
+    with specific format for the output.
+    
+2. Identify Following: Inputs, Outputs, Equestions
+
+    Inputs                           
+    ----------------------------
+    int N1
+    int N2
+
+    Outputs                           
+    ----------------------------
+    Product
+    Quotient
+    Remainder
+
+    Equations
+    ----------------------------
+    N1 * N2 = Product
+    N1 div N2 = Quotient
+    N1 mod N2 = Remainder
+
+3. Limits or Constraints  
+    - both numbers must be in -180 to 180 range
+    - output should match the given format
+
+write "Enter two integers between -180 and 180 --> "
+read N1
+read N2
+
+if ( N1 >= -180 && N1 <= 180 && N2 >= -180 && N2 <= 180) then
+
+    Product = N1 * N2
+    Quotient = N1 div N2
+    Remainder = N1 mod N2
+
+end if
+
+    
